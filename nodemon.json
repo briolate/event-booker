@@ -1,0 +1,7 @@
+{
+  "env": {
+    "MONGO_USER": "briolate",
+    "MONGO_PASSWORD": "Sparty88Dawg.",
+    "MONGO_DB": "event-booker-dev"
+  }
+}
