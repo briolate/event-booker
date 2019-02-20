@@ -1,3 +1,5 @@
+const jwt = require('jsonwebtoken');
+
 module.exports = (req, res, next) => {
   const authHeader = req.get('Authorization');
   if (!authHeader) {
@@ -9,8 +11,9 @@ module.exports = (req, res, next) => {
     req.isAuth = false;
     return next();
   }
+  let decodedToken;
   try {
-    jwt.verify(token, 'supersecretkey');
+    decodedToken = jwt.verify(token, 'supersecretkey');
   } catch (err) {
     req.isAuth = false;
     return next();

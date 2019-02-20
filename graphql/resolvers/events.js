@@ -1,5 +1,5 @@
-const User = require('../../models/user');
 const Event = require('../../models/event');
+const User = require('../../models/user');
 
 const { transformEvent } = require('./merge');
 
@@ -39,6 +39,7 @@ module.exports = {
 
       return createdEvent;
     } catch (err) {
+      console.log(err);
       throw err;
     }
   }
