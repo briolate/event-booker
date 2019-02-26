@@ -18,6 +18,7 @@ const EventList = props => {
       />
     );
   });
+
   return <ul className="event__list">{events}</ul>;
 };
 

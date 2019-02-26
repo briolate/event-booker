@@ -4,6 +4,10 @@ body {
   font-family: sans-serif;
 }
 
+button:focus {
+  outline: none;
+}
+
 .form-control label,
 .form-control input,
 .form-control textarea {
